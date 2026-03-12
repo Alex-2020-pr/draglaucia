@@ -20,15 +20,15 @@
         }
 
         :root {
-            --primary: #4A90A0; /* Soft blue-teal */
-            --primary-light: #7BB4C2;
-            --primary-soft: #E1F0F5; /* Light blue background */
+            --primary: #4A90E0; /* Soft blue */
+            --primary-light: #7BB4E0;
+            --primary-soft: #E6F0FA; /* Light blue background */
             --secondary: #5F9EA0;
             --light: #F8F9FA;
             --dark: #2C3E50;
             --text: #4A4A4A;
             --background: #FFFFFF;
-            --accent: #D4E9F0;
+            --accent: #D4E4F5;
             --success: #88A09E;
         }
 
@@ -147,7 +147,7 @@
             display: flex;
             align-items: center;
             position: relative;
-            background: linear-gradient(135deg, #F0F8FF 0%, #E1F0F5 100%);
+            background: linear-gradient(135deg, #F0F8FF 0%, #E6F0FA 100%);
             overflow: hidden;
         }
 
@@ -158,7 +158,7 @@
             right: -10%;
             width: 80%;
             height: 200%;
-            background: radial-gradient(circle, rgba(74,144,160,0.05) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(74,144,224,0.05) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -171,7 +171,7 @@
 
         .hero-badge {
             display: inline-block;
-            background: rgba(74, 144, 160, 0.1);
+            background: rgba(74, 144, 224, 0.1);
             color: var(--primary);
             padding: 0.5rem 1rem;
             border-radius: 30px;
@@ -228,13 +228,13 @@
         .btn-primary {
             background: var(--primary);
             color: white;
-            box-shadow: 0 10px 20px rgba(74, 144, 160, 0.2);
+            box-shadow: 0 10px 20px rgba(74, 144, 224, 0.2);
         }
 
         .btn-primary:hover {
             background: var(--primary-light);
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(74, 144, 160, 0.3);
+            box-shadow: 0 15px 30px rgba(74, 144, 224, 0.3);
         }
 
         .btn-secondary {
@@ -301,7 +301,7 @@
             object-fit: cover;
         }
 
-        /* About Section */
+        /* About Section - Restructured */
         .about {
             padding: 100px 5%;
             background: white;
@@ -314,7 +314,7 @@
 
         .section-tag {
             display: inline-block;
-            background: rgba(74, 144, 160, 0.1);
+            background: rgba(74, 144, 224, 0.1);
             color: var(--primary);
             padding: 0.5rem 1.5rem;
             border-radius: 30px;
@@ -329,17 +329,53 @@
             margin-bottom: 1rem;
         }
 
-        .section-header p {
-            max-width: 600px;
-            margin: 0 auto;
-            color: #666;
-        }
-
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        }
+
+        .volunteer-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: white;
+            padding: 1.2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .volunteer-icon {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .volunteer-text {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .volunteer-text small {
+            display: block;
+            font-weight: 400;
+            font-size: 0.85rem;
+            color: #666;
         }
 
         .about-content {
@@ -355,7 +391,7 @@
             top: 10px;
             right: 20px;
             font-size: 8rem;
-            color: rgba(74, 144, 160, 0.1);
+            color: rgba(74, 144, 224, 0.1);
             font-family: serif;
         }
 
@@ -401,75 +437,10 @@
             text-align: right;
         }
 
-        .credentials {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .credential-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .credential-icon {
-            width: 40px;
-            height: 40px;
-            background: white;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-        }
-
-        .volunteer-badge {
-            position: absolute;
-            bottom: -20px;
-            left: -20px;
-            background: white;
-            padding: 1.2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .volunteer-icon {
-            font-size: 2rem;
-            color: var(--primary);
-        }
-
-        .volunteer-text {
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .volunteer-text small {
-            display: block;
-            font-weight: 400;
-            font-size: 0.85rem;
-            color: #666;
-        }
-
         /* Specialties/Services */
         .specialties {
             padding: 100px 5%;
-            background: linear-gradient(135deg, #F0F8FF 0%, #E1F0F5 100%);
+            background: linear-gradient(135deg, #F0F8FF 0%, #E6F0FA 100%);
         }
 
         .services-grid {
@@ -477,6 +448,9 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .service-card {
@@ -490,13 +464,13 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(74, 144, 160, 0.1);
+            box-shadow: 0 20px 40px rgba(74, 144, 224, 0.1);
         }
 
         .service-icon {
             width: 70px;
             height: 70px;
-            background: rgba(74, 144, 160, 0.1);
+            background: rgba(74, 144, 224, 0.1);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -527,6 +501,9 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .clinic-card {
@@ -535,7 +512,7 @@
             border-radius: 20px;
             text-align: center;
             transition: all 0.3s ease;
-            border: 1px solid #D4E9F0;
+            border: 1px solid #D4E4F5;
         }
 
         .clinic-card:hover {
@@ -614,7 +591,7 @@
         /* Appointment Section */
         .appointment {
             padding: 100px 5%;
-            background: linear-gradient(135deg, #F0F8FF 0%, #E1F0F5 100%);
+            background: linear-gradient(135deg, #F0F8FF 0%, #E6F0FA 100%);
         }
 
         .appointment-container {
@@ -622,6 +599,8 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .appointment-content h2 {
@@ -644,7 +623,7 @@
         .feature-icon {
             width: 30px;
             height: 30px;
-            background: rgba(74, 144, 160, 0.1);
+            background: rgba(74, 144, 224, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -710,6 +689,9 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
             margin-bottom: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .footer-about img {
@@ -797,6 +779,9 @@
             text-align: center;
             font-size: 0.9rem;
             opacity: 0.7;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Floating WhatsApp */
@@ -894,7 +879,20 @@
                 left: 5%;
             }
 
-            .about-grid, .appointment-container {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                order: 1;
+            }
+
+            .about-content {
+                order: 2;
+            }
+
+            .appointment-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -924,10 +922,6 @@
             .hero-cta {
                 flex-direction: column;
             }
-
-            .credentials {
-                grid-template-columns: 1fr;
-            }
         }
 
         @media (max-width: 480px) {
@@ -943,6 +937,12 @@
             .hero-image-secondary {
                 display: none;
             }
+
+            .volunteer-badge {
+                left: 20px;
+                right: auto;
+                bottom: -20px;
+            }
         }
     </style>
 </head>
@@ -951,7 +951,7 @@
 
     <nav id="navbar">
         <div class="logo">
-            <img src="logo.jpeg" alt="Dra. Glaucia Garin" onerror="this.src='https://via.placeholder.com/50x50/4A90A0/ffffff?text=GG'">
+            <img src="logo.jpeg" alt="Dra. Glaucia Garin" onerror="this.src='https://via.placeholder.com/50x50/4A90E0/ffffff?text=GG'">
             <span class="doctor-name">Dra. Glaucia Gavin</span>
         </div>
         <ul class="nav-links">
@@ -973,7 +973,7 @@
                 Dra. Glaucia Gavin
                 <span>Sua saúde mental é valiosa</span>
             </h1>
-            <p class="hero-subtitle">Pós-graduada em Psiquiatria pela Santa Casa de São Paulo</p>
+            <p class="hero-subtitle">Pós-graduada em Psiquiatria pela faculdade de ciencias medicas da Santa Casa de São Paulo</p>
             <div class="hero-cta">
                 <a href="https://agendamento.quarkclinic.com.br/index/332274523" target="_blank" class="btn btn-primary">
                     <i class="fas fa-calendar-check"></i> Agendar Teleconsulta
@@ -988,10 +988,10 @@
         </div>
         <div class="hero-images">
             <div class="hero-image-main">
-                <img src="draglaucia1.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/400x500/4A90A0/ffffff?text=Dra.+Glaucia'">
+                <img src="draglaucia1.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/400x500/4A90E0/ffffff?text=Dra.+Glaucia'">
             </div>
             <div class="hero-image-secondary">
-                <img src="draglaucia2.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/200x250/7BB4C2/ffffff?text=Glaucia'">
+                <img src="draglaucia2.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/200x250/7BB4E0/ffffff?text=Glaucia'">
             </div>
         </div>
     </section>
@@ -1002,6 +1002,18 @@
             <h2>Conheça um pouco sobre mim</h2>
         </div>
         <div class="about-grid">
+            <div class="about-image">
+                <img src="draglaucia1.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/500x600/4A90E0/ffffff?text=Dra.+Glaucia'">
+                <div class="volunteer-badge">
+                    <div class="volunteer-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="volunteer-text">
+                        Atendimento Voluntário
+                        <small>Surdovel - População Surda</small>
+                    </div>
+                </div>
+            </div>
             <div class="about-content">
                 <div class="doctor-name-about">Dra. Glaucia Gavin</div>
                 <div class="crm">CRM/PR 37.791</div>
@@ -1027,18 +1039,6 @@
 
                 <div class="signature">
                     Com carinho, Dra. Glaucia Gavin! 👩🏻‍⚕️
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="draglaucia1.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/500x600/4A90A0/ffffff?text=Dra.+Glaucia'">
-                <div class="volunteer-badge">
-                    <div class="volunteer-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <div class="volunteer-text">
-                        Atendimento Voluntário
-                        <small>Surdovel - População Surda</small>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1170,7 +1170,7 @@
                 </div>
             </div>
             <div class="appointment-image">
-                <img src="draglaucia2.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/500x600/4A90A0/ffffff?text=Consulta'">
+                <img src="draglaucia2.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/500x600/4A90E0/ffffff?text=Consulta'">
                 <div class="online-badge">
                     <i class="fas fa-video"></i>
                     <span>Telemedicina</span>
@@ -1182,7 +1182,7 @@
     <footer id="contact">
         <div class="footer-grid">
             <div class="footer-about">
-                <img src="logo.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/150x50/4A90A0/ffffff?text=Dra.+Glaucia+Gavin'">
+                <img src="logo.jpeg" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/150x50/4A90E0/ffffff?text=Dra.+Glaucia+Gavin'">
                 <div class="doctor-name">Dra. Glaucia Gavin</div>
                 <p>Médica dedicada ao cuidado da saúde mental com excelência e humanização.</p>
                 <div class="social-links">
