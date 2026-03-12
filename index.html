@@ -423,7 +423,7 @@
             font-size: 1.2rem;
         }
 
-        /* Specialties - Updated without medication names */
+        /* Specialties */
         .specialties {
             padding: 100px 5%;
             background: linear-gradient(135deg, #F0F8FF 0%, #E6F0FA 100%);
@@ -589,22 +589,59 @@
             gap: 0.5rem;
         }
 
-        /* Philosophy Section */
+        /* Philosophy Section - Now with image */
         .philosophy {
             padding: 80px 5%;
             background: var(--warm);
         }
 
         .philosophy-container {
-            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
+        }
+
+        .philosophy-image {
+            position: relative;
+        }
+
+        .philosophy-image img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        }
+
+        .philosophy-image-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: white;
+            padding: 1rem;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .philosophy-image-badge i {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .philosophy-content {
+            text-align: left;
         }
 
         .philosophy-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .philosophy-text {
@@ -612,8 +649,8 @@
             line-height: 1.9;
             color: var(--dark);
             background: white;
-            padding: 3rem;
-            border-radius: 40px;
+            padding: 2.5rem;
+            border-radius: 30px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
             position: relative;
         }
@@ -623,33 +660,23 @@
             position: absolute;
             top: 10px;
             left: 20px;
-            font-size: 5rem;
+            font-size: 4rem;
             color: var(--primary-soft);
             font-family: serif;
-            opacity: 0.5;
-        }
-
-        .philosophy-text::after {
-            content: '"';
-            position: absolute;
-            bottom: 10px;
-            right: 20px;
-            font-size: 5rem;
-            color: var(--primary-soft);
-            font-family: serif;
-            opacity: 0.5;
+            opacity: 0.3;
         }
 
         .philosophy-signature {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             font-family: 'Caveat', cursive;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--primary);
+            text-align: right;
         }
 
         .philosophy-crm {
             color: var(--text);
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-family: 'Inter', sans-serif;
         }
 
@@ -961,6 +988,19 @@
                 order: 2;
             }
 
+            .philosophy-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .philosophy-image {
+                order: 1;
+            }
+
+            .philosophy-content {
+                order: 2;
+            }
+
             .appointment-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -991,11 +1031,6 @@
             .hero-cta {
                 flex-direction: column;
             }
-
-            .philosophy-text {
-                padding: 2rem;
-                font-size: 1.1rem;
-            }
         }
 
         @media (max-width: 480px) {
@@ -1020,6 +1055,17 @@
 
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .philosophy-image-badge {
+                width: 60px;
+                height: 60px;
+                right: -10px;
+                bottom: -10px;
+            }
+
+            .philosophy-image-badge i {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -1082,7 +1128,7 @@
         </div>
         <div class="about-grid">
             <div class="about-image">
-                <img src="draglaucia3.png" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/500x600/4A90E0/ffffff?text=Dra.+Glaucia'">
+                <img src="foto.png" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/500x600/4A90E0/ffffff?text=Dra.+Glaucia'">
                 <div class="experience-badge">
                     <div class="experience-icon">
                         <i class="fas fa-heart"></i>
@@ -1115,21 +1161,29 @@
 
     <section id="philosophy" class="philosophy">
         <div class="philosophy-container">
-            <div class="philosophy-icon">
-                <i class="fas fa-feather-alt"></i>
+            <div class="philosophy-image">
+                <img src="draglaucia4.png" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/500x600/4A90E0/ffffff?text=Dra.+Glaucia'">
+                <div class="philosophy-image-badge">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
             </div>
-            <div class="philosophy-text">
-                <p>Cuidar da saúde mental é muito mais do que tratar sintomas — é acolher histórias, fortalecer caminhos e ajudar pessoas a reencontrarem o próprio equilíbrio.</p>
+            <div class="philosophy-content">
+                <div class="philosophy-icon">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="philosophy-text">
+                    <p>Cuidar da saúde mental é muito mais do que tratar sintomas — é acolher histórias, fortalecer caminhos e ajudar pessoas a reencontrarem o próprio equilíbrio.</p>
 
-                <p>Sou profundamente grata por exercer uma profissão que me permite participar de transformações tão reais: ver alguém recuperar a esperança, dormir melhor, se reconectar com a vida, com a família e consigo mesmo.</p>
+                    <p>Sou profundamente grata por exercer uma profissão que me permite participar de transformações tão reais: ver alguém recuperar a esperança, dormir melhor, se reconectar com a vida, com a família e consigo mesmo.</p>
 
-                <p>Cada paciente é único. Cada conquista importa. E cada evolução me lembra por que escolhi essa missão.</p>
+                    <p>Cada paciente é único. Cada conquista importa. E cada evolução me lembra por que escolhi essa missão.</p>
 
-                <p>A saúde mental muda vidas — e eu sigo feliz por poder fazer parte disso todos os dias. ✨</p>
-            </div>
-            <div class="philosophy-signature">
-                Com carinho, Dra. Glaucia Gavin
-                <div class="philosophy-crm">Médica CRM-PR 37.791 👩🏻‍⚕️</div>
+                    <p>A saúde mental muda vidas — e eu sigo feliz por poder fazer parte disso todos os dias. ✨</p>
+                </div>
+                <div class="philosophy-signature">
+                    Com carinho, Dra. Glaucia Gavin
+                    <div class="philosophy-crm">Médica CRM-PR 37.791 👩🏻‍⚕️</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1447,7 +1501,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .clinic-card, .about-content, .about-image, .philosophy-text').forEach(el => {
+        document.querySelectorAll('.service-card, .clinic-card, .about-content, .about-image, .philosophy-content, .philosophy-image').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
@@ -1458,6 +1512,10 @@
         document.querySelectorAll('img').forEach(img => {
             img.onerror = function() {
                 console.log('Image failed to load:', this.src);
+                // Optionally set a fallback
+                if (!this.src.includes('placeholder')) {
+                    this.src = 'https://via.placeholder.com/500x600/4A90E0/ffffff?text=Dra.+Glaucia';
+                }
             };
         });
     </script>
