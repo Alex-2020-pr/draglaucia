@@ -20,16 +20,17 @@
         }
 
         :root {
-            --primary: #4A90E0; /* Soft blue */
+            --primary: #4A90E0;
             --primary-light: #7BB4E0;
-            --primary-soft: #E6F0FA; /* Light blue background */
+            --primary-soft: #E6F0FA;
+            --primary-very-soft: #F0F8FF;
             --secondary: #5F9EA0;
             --light: #F8F9FA;
             --dark: #2C3E50;
             --text: #4A4A4A;
             --background: #FFFFFF;
             --accent: #D4E4F5;
-            --success: #88A09E;
+            --warm: #F9F3E9;
         }
 
         body {
@@ -42,7 +43,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Custom cursor effect */
+        /* Custom cursor */
         .cursor {
             width: 20px;
             height: 20px;
@@ -301,7 +302,7 @@
             object-fit: cover;
         }
 
-        /* About Section */
+        /* About Section - Updated with new message */
         .about {
             padding: 100px 5%;
             background: white;
@@ -333,7 +334,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: start;
+            align-items: center;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -348,12 +349,12 @@
             box-shadow: 0 30px 60px rgba(0,0,0,0.1);
         }
 
-        .volunteer-badge {
+        .experience-badge {
             position: absolute;
             bottom: -20px;
-            right: -20px;
+            left: -20px;
             background: white;
-            padding: 1.2rem;
+            padding: 1.2rem 1.5rem;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             display: flex;
@@ -361,17 +362,18 @@
             gap: 1rem;
         }
 
-        .volunteer-icon {
+        .experience-icon {
             font-size: 2rem;
             color: var(--primary);
         }
 
-        .volunteer-text {
+        .experience-text {
             font-weight: 600;
             color: var(--dark);
+            line-height: 1.4;
         }
 
-        .volunteer-text small {
+        .experience-text small {
             display: block;
             font-weight: 400;
             font-size: 0.85rem;
@@ -379,20 +381,19 @@
         }
 
         .about-content {
-            background: var(--primary-soft);
+            background: var(--warm);
             padding: 2.5rem;
             border-radius: 30px;
             position: relative;
         }
 
         .about-content::before {
-            content: '"';
+            content: '❤️';
             position: absolute;
-            top: 10px;
+            top: 20px;
             right: 20px;
-            font-size: 8rem;
-            color: rgba(74, 144, 224, 0.1);
-            font-family: serif;
+            font-size: 3rem;
+            opacity: 0.1;
         }
 
         .doctor-name-about {
@@ -410,34 +411,34 @@
 
         .about-text {
             margin: 1.5rem 0;
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
+            font-size: 1.05rem;
             line-height: 1.8;
         }
 
-        .highlight-quote {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 20px;
-            margin: 1.5rem 0;
-            border-left: 4px solid var(--primary);
-            font-style: italic;
-            font-weight: 500;
+        .about-text p {
+            margin-bottom: 1.2rem;
+        }
+
+        .about-text .emoji {
+            font-size: 1.2rem;
+        }
+
+        .signature-message {
+            font-size: 1rem;
             color: var(--dark);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px dashed var(--primary-light);
         }
 
-        .signature {
+        .signature-name {
             font-family: 'Caveat', cursive;
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--primary);
-            margin-top: 1.5rem;
-            text-align: right;
+            margin: 0.5rem 0 0.2rem;
         }
 
-        /* Specialties/Services - Enhanced */
+        /* Specialties/Services */
         .specialties {
             padding: 100px 5%;
             background: linear-gradient(135deg, #F0F8FF 0%, #E6F0FA 100%);
@@ -503,25 +504,6 @@
 
         .service-description p {
             margin-bottom: 0.75rem;
-        }
-
-        .service-description ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .service-description li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .service-description li::before {
-            content: "•";
-            color: var(--primary);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
         }
 
         /* Clinics */
@@ -620,6 +602,70 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+        }
+
+        /* New Section: Philosophy */
+        .philosophy {
+            padding: 80px 5%;
+            background: var(--warm);
+        }
+
+        .philosophy-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .philosophy-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .philosophy-text {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--dark);
+            background: white;
+            padding: 3rem;
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .philosophy-text::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--primary-soft);
+            font-family: serif;
+            opacity: 0.5;
+        }
+
+        .philosophy-text::after {
+            content: '"';
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 5rem;
+            color: var(--primary-soft);
+            font-family: serif;
+            opacity: 0.5;
+        }
+
+        .philosophy-signature {
+            margin-top: 2rem;
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .philosophy-crm {
+            color: var(--text);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
         }
 
         /* Appointment Section */
@@ -960,6 +1006,11 @@
             .hero-cta {
                 flex-direction: column;
             }
+
+            .philosophy-text {
+                padding: 2rem;
+                font-size: 1.1rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -976,10 +1027,10 @@
                 display: none;
             }
 
-            .volunteer-badge {
-                left: 20px;
-                right: auto;
-                bottom: -20px;
+            .experience-badge {
+                left: 10px;
+                bottom: -30px;
+                padding: 1rem;
             }
 
             .services-grid {
@@ -1001,6 +1052,7 @@
             <li><a href="#about">Sobre</a></li>
             <li><a href="#specialties">Atuação</a></li>
             <li><a href="#clinics">Clínicas</a></li>
+            <li><a href="#philosophy">Filosofia</a></li>
             <li><a href="#contact">Contato</a></li>
         </ul>
         <div class="mobile-menu">
@@ -1025,7 +1077,7 @@
                 </a>
             </div>
             <div class="hero-quote">
-                <p>"Acredito que TODO PACIENTE É O AMOR DA VIDA DE ALGUÉM"</p>
+                <p>"Cuidar da saúde mental é acolher histórias e fortalecer caminhos"</p>
             </div>
         </div>
         <div class="hero-images">
@@ -1045,14 +1097,14 @@
         </div>
         <div class="about-grid">
             <div class="about-image">
-                <img src="draglaucia3.png" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/500x600/4A90E0/ffffff?text=Dra.+Glaucia'">
-                <div class="volunteer-badge">
-                    <div class="volunteer-icon">
-                        <i class="fas fa-hands-helping"></i>
+                <img src="draglaucia4.png" alt="Dra. Glaucia Gavin" onerror="this.src='https://via.placeholder.com/500x600/4A90E0/ffffff?text=Dra.+Glaucia'">
+                <div class="experience-badge">
+                    <div class="experience-icon">
+                        <i class="fas fa-heart"></i>
                     </div>
-                    <div class="volunteer-text">
-                        Atendimento Voluntário
-                        <small>Surdovel - População Surda</small>
+                    <div class="experience-text">
+                        Atendimento Humanizado
+                        <small>CRM-PR 37.791</small>
                     </div>
                 </div>
             </div>
@@ -1069,19 +1121,31 @@
 
                     <p>Saber ouvir, entender, ser empática, acolher, respeitar... tudo isso faz parte de um bom atendimento.</p>
 
-                    <div class="highlight-quote">
-                        Acredito que TODO O PACIENTE É O AMOR DA VIDA DE ALGUÉM, e por acreditar nisso que amo oque faço e reconheço meu comprometimento com meus pacientes.
-                    </div>
-
                     <p>🤟🏻 Estudando e aprendendo Libras (língua brasileira de sinais), pois a acessibilidade transforma vidas!<br>
                     Voluntária para atendimentos à população surda de Cascavel na Surdovel°.</p>
-
-                    <p>Estou à disposição para lhe atender. 📝</p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="signature">
-                    Com carinho, Dra. Glaucia Gavin! 👩🏻‍⚕️
-                </div>
+    <!-- New Section: Philosophy with your beautiful message -->
+    <section id="philosophy" class="philosophy">
+        <div class="philosophy-container">
+            <div class="philosophy-icon">
+                <i class="fas fa-feather-alt"></i>
+            </div>
+            <div class="philosophy-text">
+                <p>Cuidar da saúde mental é muito mais do que tratar sintomas — é acolher histórias, fortalecer caminhos e ajudar pessoas a reencontrarem o próprio equilíbrio.</p>
+
+                <p>Sou profundamente grata por exercer uma profissão que me permite participar de transformações tão reais: ver alguém recuperar a esperança, dormir melhor, se reconectar com a vida, com a família e consigo mesmo.</p>
+
+                <p>Cada paciente é único. Cada conquista importa. E cada evolução me lembra por que escolhi essa missão.</p>
+
+                <p>A saúde mental muda vidas — e eu sigo feliz por poder fazer parte disso todos os dias. ✨</p>
+            </div>
+            <div class="philosophy-signature">
+                Com carinho, Dra. Glaucia Gavin
+                <div class="philosophy-crm">Médica CRM-PR 37.791 👩🏻‍⚕️</div>
             </div>
         </div>
     </section>
@@ -1114,7 +1178,7 @@
                 </div>
                 <div class="service-description">
                     <p>Ansiedade generalizada, pânico, fobia social e transtornos relacionados a traumas (TEPT).</p>
-                    <p>Tratamentos incluem ISRSs (inibidores seletivos da recaptação de serotonina), benzodiazepínicos (com cautela) e terapias cognitivo-comportamentais.</p>
+                    <p>Tratamentos incluem ISRSs, benzodiazepínicos (com cautela) e terapias cognitivo-comportamentais.</p>
                 </div>
             </div>
 
@@ -1278,6 +1342,7 @@
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#specialties">Atuação</a></li>
                     <li><a href="#clinics">Clínicas</a></li>
+                    <li><a href="#philosophy">Filosofia</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </div>
@@ -1386,7 +1451,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .clinic-card, .about-content, .about-image').forEach(el => {
+        document.querySelectorAll('.service-card, .clinic-card, .about-content, .about-image, .philosophy-text').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
